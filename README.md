@@ -1,41 +1,33 @@
 # rtsp-player-extension
 
-## _A Foxglove Studio Extension_
+## usage
 
-[Foxglove Studio](https://github.com/foxglove/studio) allows developers to create extensions, or custom code that is loaded and executed inside the Foxglove Studio application. This can be used to add custom panels. Extensions are authored in TypeScript using the `@foxglove/studio` SDK.
+Using `iframe` to embedded a `RTSP` stream and play it seamlessly.
 
-## Develop
+code:
 
-Extension development uses the `npm` package manager to install development dependencies and run build scripts.
-
-To install extension dependencies, run `npm` from the root of the extension package.
-
-```sh
-npm install
+```html
+<iframe allow="autoplay" src="http://127.0.0.1:8888/demo1" style="overflow: hidden; height: 100%; width: 100%;"></iframe>
 ```
 
-To build and install the extension into your local Foxglove Studio desktop app, run:
+effect:
 
-```sh
-npm run local-install
-```
+!["RTSP Stream Player"](images/rtsp-play-render.png "RTSP Stream Player") 
 
-Open the `Foxglove Studio` desktop (or `ctrl-R` to refresh if it is already open). Your extension is installed and available within the app.
+## get started
 
-## Package
+1. `https://github.com/foxglove-custom/rtsp-player-extension.git`
 
-Extensions are packaged into `.foxe` files. These files contain the metadata (package.json) and the build code for the extension.
+2. `cd rtsp-player-extension.git`
 
-Before packaging, make sure to set `name`, `publisher`, `version`, and `description` fields in _package.json_. When ready to distribute the extension, run:
+3. `npm install`
 
-```sh
-npm run package
-```
+4. `npm run package`,it will generate a `foxe` file called `orienlink.rtsp-player-extension-0.0.1.foxe`
 
-This command will package the extension into a `.foxe` file in the local directory.
+5. Drag it into your `foxglove` web page,if it install success,we will see the notify message like below:
 
-## Publish
+   !["foxglove install success"](images/foxglove-extension-install-success.png "foxglove install success")
 
-You can publish the extension for the public marketplace or privately for your organization.
+6. Custom panel will appear if we switch panel
 
-See documentation here: https://foxglove.dev/docs/studio/extensions/publish#packaging-your-extension
+   !["foxglove select custom panel"](images/foxglove-select-custom-panel.png "foxglove select custom panel")
