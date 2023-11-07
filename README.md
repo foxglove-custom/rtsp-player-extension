@@ -1,8 +1,12 @@
 # rtsp-player-extension
 
+ A [foxglove studio](https://console.foxglove.dev/) extesion used to play [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) video stream data seamlessly.
+
+An implemention for `foxglove` github issue [AVC / H.264 video support #87](https://github.com/foxglove/community/issues/87)
+
 ## usage
 
-Using `iframe` to embedded a `RTSP` stream and play it seamlessly.
+Using `iframe` to embedded a `RTSP` stream and play it.
 
 code:
 
@@ -16,7 +20,7 @@ effect:
 
 ## get started
 
-1. `https://github.com/foxglove-custom/rtsp-player-extension.git`
+1. `git clone https://github.com/foxglove-custom/rtsp-player-extension.git`
 
 2. `cd rtsp-player-extension.git`
 
